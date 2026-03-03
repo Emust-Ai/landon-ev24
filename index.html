@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ev24</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            surface: '#f5f0fa',
+            muted: '#7c6f8a',
+            border: '#d8cfe5',
+            dark: '#6B3FA0',
+            warm: '#faf8fc',
+            orange: '#F58220',
+            green: '#8CC63F',
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    ::selection { background: #6B3FA0; color: #fff; }
+    body { min-height: 100dvh; }
+    .card { width: 100%; max-width: 28rem; }
+    .btn { min-height: 56px; font-size: 1.125rem; }
+    @media (min-width: 640px) {
+      .btn { min-height: 48px; font-size: 1rem; }
+    }
+    .logo-img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 1rem;
+      box-shadow: 0 3px 18px rgba(107,63,160,.12);
+    }
+    .divider {
+      width: 3rem;
+      height: 2px;
+      background: #d8cfe5;
+      margin: 0 auto;
+    }
+    .btn-primary:hover { background: #5a3589; }
+    .btn-outline:hover { background: #6B3FA0; color: #fff; border-color: #6B3FA0; }
+  </style>
+</head>
+<body class="bg-warm text-dark font-sans antialiased flex items-start justify-center px-8 pt-16 pb-12">
+
+  <div class="card text-center">
+
+    <!-- LOGO + NAME -->
+    <div class="mb-8">
+      <img src="Logo-EV24.png" alt="Logo EV24" class="logo-img mx-auto mb-3" />
+      <h1 class="text-3xl sm:text-2xl font-semibold tracking-tight">EV24</h1>
+      <p class="text-base text-muted mt-1.5">AI-Assisted Support solution for EV charging</p>
+      <div class="divider mt-4"></div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="space-y-3.5">
+
+      <!-- Contact us -->
+      <a href="tel:+33159030154" class="btn btn-primary flex items-center justify-center gap-3 w-full bg-dark text-white font-medium py-4 rounded-full transition-colors">
+        <svg class="w-6 h-6 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+        +33 1 59 03 01 54
+      </a>
+
+      <!-- Support -->
+      <a href="https://www.ev24.io/support" target="_blank" class="btn btn-outline flex items-center justify-center gap-3 w-full border border-dark text-dark font-medium py-4 rounded-full transition-all duration-200">
+        <svg class="w-6 h-6 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"/></svg>
+        Support
+      </a>
+
+    </div>
+
+  </div>
+
+<script>
+  window.chatwootSettings = {"position":"right","type":"expanded_bubble","launcherTitle":"Chat with us"};
+  (function(d,t) {
+    var BASE_URL="https://app.ask-innovation.com";
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=BASE_URL+"/packs/js/sdk.js";
+    g.async = true;
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      window.chatwootSDK.run({
+        websiteToken: '4vD11ZWKfZ5ubc7uWA4kekuc',
+        baseUrl: BASE_URL
+      })
+    }
+  })(document,"script");
+</script>
+
+
+</body>
+</html>
